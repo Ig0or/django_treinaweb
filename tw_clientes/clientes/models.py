@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Cliente(models.Model):
     SEXO_CHOICES = (
         ("F", "Feminino"),

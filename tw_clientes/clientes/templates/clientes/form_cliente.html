@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.nome.errors }}
+        <label>Nome: </label>
+        {{ form.nome }}
+    </div>
+
+    <div>
+        {{ form.sexo.errors }}
+        <label>Sexo: </label>
+        {{ form.sexo }}
+    </div>
+
+    <div>
+        {{ form.data_nascimento.errors }}
+        <label>Data de Nascimento: </label>
+        {{ form.data_nascimento }}
+    </div>
+
+    <div>
+        {{ form.email.errors }}
+        <label>Email: </label>
+        {{ form.email }}
+    </div>
+
+    <div>
+        {{ form.profissao.errors }}
+        <label>Profissão: </label>
+        {{ form.profissao }}
+    </div>
+    
+    <div>
+        <input type="submit" name="Cadastrar">
+    </div>
+</form>
+
+</body>
+</html>
