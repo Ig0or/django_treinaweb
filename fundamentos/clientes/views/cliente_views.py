@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from .forms import ClienteForm, EnderecoForm
-from .entidades import cliente, endereco
-from .services import cliente_service, endereco_service
+from ..forms.endereco_forms import EnderecoForm
+from ..forms.cliente_forms import ClienteForm
+from ..entidades import cliente, endereco
+from ..services import cliente_service, endereco_service
 # Create your views here.
 
 

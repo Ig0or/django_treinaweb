@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Listagem de Pedido
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h4>Dados do Cliente</h4>
+        <div class="card-body">
+            <h5 class="card-title">Nome: {{ pedido.cliente.nome }}</h5>
+            <h5 class="card-title">Sexo: {{ pedido.cliente.sexo }}</h5>
+            <h5 class="card-title">Data de Nascimento: {{ pedido.cliente.data_nascimento }}</h5>
+            <h5 class="card-title">Email: {{ pedido.cliente.email }}</h5>
+            <h5 class="card-title">Profissao: {{ pedido.cliente.profissao }}</h5>
+            <hr>
+            <h4>Endereço</h4>
+            <h5 class="card-title">Rua: {{ pedido.cliente.endereco.rua }}</h5>
+            <h5 class="card-title">Numero: {{ pedido.cliente.endereco.numero }}</h5>
+            <h5 class="card-title">Complemento: {{ pedido.cliente.endereco.complemento }}</h5>
+            <h5 class="card-title">Bairro: {{ pedido.cliente.endereco.bairro }}</h5>
+            <h5 class="card-title">Cidade: {{ pedido.cliente.endereco.cidade }}</h5>
+            <hr>
+            <h4>Pedido</h4>
+            <h5 class="card-title">Data do Pedido: {{ pedido.data_pedido }}</h5>
+            <h5 class="card-title">Valor: {{ pedido.valor }}</h5>
+            <h5 class="card-title">Status: {{ pedido.status }}</h5>
+            <h5 class="card-title">Observações: {{ pedido.observacoes }}</h5>
+
+        </div>
+    </div>
+{% endblock %}

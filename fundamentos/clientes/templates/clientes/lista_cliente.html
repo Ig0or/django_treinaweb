@@ -1,4 +1,4 @@
-{% extends 'clientes/base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
     Listagem de cliente
@@ -6,9 +6,7 @@
 
 {% block content %}
     <div class="card">
-        <div class="card-header">
-            Dados do cliente
-        </div>
+        <h4>Dados do Cliente</h4>
         <div class="card-body">
             <h5 class="card-title">Nome: {{ cliente.nome }}</h5>
             <h5 class="card-title">Sexo: {{ cliente.sexo }}</h5>

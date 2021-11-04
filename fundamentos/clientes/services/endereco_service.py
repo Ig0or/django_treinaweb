@@ -1,4 +1,3 @@
-from clientes.forms import EnderecoForm
 from ..models import Endereco
 
 def cadastrar_endereco(endereco):

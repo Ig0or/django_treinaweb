@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.expressions import F
+from django.utils import timezone
 
 # Create your models here.
 
@@ -13,6 +14,22 @@ class Endereco(models.Model):
 
     def __str__(self):
         return self.rua
+
+class Pedido(models.Model):
+    STATUS_CHOICES = (
+        ('P', 'Pedido realizado'),
+        ('F', 'Fazendo'),
+        ('E', 'Saiu para entrega')
+    )
+
+    cliente = models.ForeignKey("Cliente", on_delete=models.CASCADE)
+    data_pedido = models.DateTimeField(default=timezone.now)
+    valor = models.FloatField(blank=False, null=False)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, null=False, blank=False)
+    observacoes = models.CharField(max_length=50, null=True, blank=True)
+
+    def __str__(self):
+        return self.cliente.nome
 
 class Cliente(models.Model):
     SEXO_CHOICES = (
