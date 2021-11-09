@@ -23,4 +23,5 @@ def editar_pedido(pedido_antigo, pedido_novo):
     pedido_antigo.data_pedido = pedido_novo.data_pedido
     pedido_antigo.valor = pedido_novo.valor
     pedido_antigo.status = pedido_novo.status
+    pedido_antigo.produtos.set(pedido_novo.produtos)
     pedido_antigo.save(force_update=True)
