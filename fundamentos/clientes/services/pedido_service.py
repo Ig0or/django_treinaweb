@@ -1,5 +1,6 @@
 from ..models import Pedido
 from .produto_service import *
+from django.db import connection
 
 def cadastrar_pedido(pedido):
     pedido_bd = Pedido.objects.create(cliente=pedido.cliente, data_pedido=pedido.data_pedido, valor=pedido.valor,status=pedido.status, observacoes=pedido.observacoes)
@@ -10,7 +11,9 @@ def cadastrar_pedido(pedido):
 
 
 def listar_pedidos():
-    pedidos = Pedido.objects.all()
+    # pedidos = Pedido.objects.all()
+    pedidos = Pedido.objects.select_related('cliente').all()
+    # pedidos = Pedido.objects.prefetch_related('produtos').all()
     return pedidos
 
 def listar_pedido_id(id):
