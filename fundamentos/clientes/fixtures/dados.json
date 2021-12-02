@@ -1,0 +1,158 @@
+[
+    {
+        "model": "clientes.endereco",
+        "pk": 3,
+        "fields": {
+            "rua": "rua abaerta",
+            "numero": 121,
+            "complemento": "n/a",
+            "bairro": "centro",
+            "cidade": "sao paulo",
+            "pais": "brasil"
+        }
+    },
+    {
+        "model": "clientes.endereco",
+        "pk": 4,
+        "fields": {
+            "rua": "rua abaerta",
+            "numero": 1212,
+            "complemento": "n/a",
+            "bairro": "centro",
+            "cidade": "sao paulo",
+            "pais": "brasil"
+        }
+    },
+    {
+        "model": "clientes.endereco",
+        "pk": 5,
+        "fields": {
+            "rua": "235",
+            "numero": 2,
+            "complemento": "2",
+            "bairro": "22",
+            "cidade": "2",
+            "pais": "2"
+        }
+    },
+    {
+        "model": "clientes.produto",
+        "pk": 1,
+        "fields": {
+            "nome": "pizza calabresa",
+            "descricao": "uma otima pizza",
+            "valor": 25.0
+        }
+    },
+    {
+        "model": "clientes.produto",
+        "pk": 2,
+        "fields": {
+            "nome": "pizza calabresa",
+            "descricao": "uma otima pizza",
+            "valor": 25.0
+        }
+    },
+    {
+        "model": "clientes.produto",
+        "pk": 3,
+        "fields": {
+            "nome": "lasanha",
+            "descricao": "sem molho",
+            "valor": 30.0
+        }
+    },
+    {
+        "model": "clientes.produto",
+        "pk": 4,
+        "fields": {
+            "nome": "pizza de presuento",
+            "descricao": "muito presunto",
+            "valor": 60.0
+        }
+    },
+    {
+        "model": "clientes.pedido",
+        "pk": 1,
+        "fields": {
+            "cliente": 1,
+            "data_pedido": "2021-11-04T15:40:11Z",
+            "valor": 30.0,
+            "status": "P",
+            "observacoes": "sem cebola",
+            "produtos": [3]
+        }
+    },
+    {
+        "model": "clientes.pedido",
+        "pk": 2,
+        "fields": {
+            "cliente": 1,
+            "data_pedido": "2021-11-04T15:58:10Z",
+            "valor": 42.0,
+            "status": "P",
+            "observacoes": "Pizza",
+            "produtos": []
+        }
+    },
+    {
+        "model": "clientes.pedido",
+        "pk": 3,
+        "fields": {
+            "cliente": 1,
+            "data_pedido": "2021-11-04T15:58:10Z",
+            "valor": 18.0,
+            "status": "E",
+            "observacoes": "Macarraoa",
+            "produtos": [1, 2, 3]
+        }
+    },
+    {
+        "model": "clientes.pedido",
+        "pk": 4,
+        "fields": {
+            "cliente": 1,
+            "data_pedido": "2021-11-09T15:43:03Z",
+            "valor": 50.0,
+            "status": "P",
+            "observacoes": "sem cebola",
+            "produtos": [2]
+        }
+    },
+    {
+        "model": "clientes.pedido",
+        "pk": 5,
+        "fields": {
+            "cliente": 1,
+            "data_pedido": "2021-11-09T18:03:20Z",
+            "valor": 25.0,
+            "status": "P",
+            "observacoes": "Macarraoa",
+            "produtos": [1]
+        }
+    },
+    {
+        "model": "clientes.cliente",
+        "pk": 1,
+        "fields": {
+            "nome": "Maria",
+            "data_nascimento": "2001-01-06",
+            "email": "maria@mail.com",
+            "profissao": "Professora",
+            "sexo": "N",
+            "endereco": 5
+        }
+    },
+    {
+        "model": "clientes.cliente",
+        "pk": 2,
+        "fields": {
+            "nome": "Joaana",
+            "data_nascimento": "2001-01-06",
+            "email": "joana@mail.com",
+            "profissao": "Professora",
+            "sexo": "N",
+            "endereco": 3
+        }
+    }
+]
