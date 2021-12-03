@@ -6,7 +6,6 @@ from ..entidades import cliente, endereco
 from ..services import cliente_service, endereco_service
 # Create your views here.
 
-# @cache_page(20)
 def listar_clientes(request):
     clientes = cliente_service.listar_clientes()
     return render(request, 'clientes/lista_clientes.html', {'clientes': clientes})

@@ -2,7 +2,7 @@ from ..models import Cliente
 
 
 def listar_clientes():
-    clientes = Cliente.objects.all()
+    clientes = Cliente.objects.filter().all()
     return clientes
 
 

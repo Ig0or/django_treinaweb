@@ -76,16 +76,40 @@ WSGI_APPLICATION = 'tw_clientes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# CONEXAO MYSQL
 DATABASES = {
-    'default': {
+    'default': {},    
+    'escrita': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tw_django_escrita',
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'leitura': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tw_django_fundamentos',
         'USER': 'root',
         'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
-    }
+    },
 }
+
+DATABASE_ROUTERS = ['clientes.router.Router']
+
+# # CONEXAO POSTGRE
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '1234',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # CACHES REDIS
 # CACHES = {
